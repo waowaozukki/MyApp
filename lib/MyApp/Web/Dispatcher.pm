@@ -2,28 +2,19 @@ package MyApp::Web::Dispatcher;
 use strict;
 use warnings;
 use utf8;
-use Amon2::Web::Dispatcher::RouterBoom;
+use Mine::Web::Dispatcher::Lite;
 
-any '/' => sub {
-    my ($c) = @_;
-    my $counter = $c->session->get('counter') || 0;
-    $counter++;
-    $c->session->set('counter' => $counter);
-    return $c->render('index.tx', {
-        counter => $counter,
-    });
+my $router = router {
+    # root
+    submapper('/', { controller => 'Root' })
+        ->connect('say/{tmpl_path:[a-zA-Z0-9/_-]+}/{hitokoto:[a-zA-Z0-9/_-]+}/', { action => 'say' })
 };
 
-post '/reset_counter' => sub {
-    my $c = shift;
-    $c->session->remove('counter');
-    return $c->redirect('/');
-};
+dispatch_with $router,
+    controller => controller();
 
-post '/account/logout' => sub {
-    my ($c) = @_;
-    $c->session->expire();
-    return $c->redirect('/');
-};
+sub controller { 'MyApp::Web::C' }
+
+sub routing { $router }
 
 1;

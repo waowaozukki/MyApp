@@ -4,11 +4,42 @@ use warnings;
 use utf8;
 use parent qw/MyApp Amon2::Web/;
 use File::Spec;
+use Data::Dumper;
+use Data::Validator;
+use Log::Minimal;
+use Log::Log4perl;
 
 # dispatcher
 use MyApp::Web::Dispatcher;
 sub dispatch {
-    return (MyApp::Web::Dispatcher->dispatch($_[0]) or die "response is not generated");
+    my $c = shift;
+
+    my $res;
+    eval {
+        $res = MyApp::Web::Dispatcher->dispatch($c);
+    };
+    if($@) {
+        $c->warn_log_to(Dumper($@));
+        return $c->res_500();
+    }
+
+    return ($res);
+}
+
+sub warn_log_to {
+    my ($c, $log) = @_;
+
+    Log::Minimal::warnf($log);
+}
+
+sub validator {
+    my ($c, $data) = @_;
+
+    my $v = Data::Validator->new(%{$data->{rule}});
+
+    my %req = map { $_ => $data->{params}->{$_} } keys %{$data->{rule}};
+
+    return $v->validate(%req);
 }
 
 # load plugins

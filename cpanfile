@@ -1,5 +1,6 @@
 requires 'Amon2', '6.12';
 requires 'Crypt::CBC';
+requires 'String::CamelCase';
 requires 'Crypt::Rijndael';
 requires 'DBD::SQLite', '1.33';
 requires 'HTML::FillInForm::Lite', '1.11';
