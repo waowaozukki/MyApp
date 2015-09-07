@@ -1,0 +1,3 @@
+tenplate は　[% tmpl_path %] です。<br>
+
+ひとことは [% hitokoto %] です。
