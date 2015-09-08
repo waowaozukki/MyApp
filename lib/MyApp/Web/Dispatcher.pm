@@ -7,6 +7,8 @@ use Mine::Web::Dispatcher::Lite;
 my $router = router {
     # root
     submapper('/', { controller => 'Root' })
+        ->connect('member/', { action => 'member' })
+        ->connect('ranking/', { action => 'ranking' })
         ->connect('say/{tmpl_path:[a-zA-Z0-9/_-]+}/{hitokoto:[a-zA-Z0-9/_-]+}/', { action => 'say' })
 };
 

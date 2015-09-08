@@ -1,0 +1,32 @@
+[% INCLUDE "include/header.tt" %]
+
+<h1>最新アクティビティ１００件</h1>
+アクティビティ数とは、ブロック等を設置除去するたびに<br>
+カウントされていきます<br>
+<br>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr>
+<th>作業ID</th>
+<th>日時</th>
+<th>プレイヤー名</th>
+<th>ワールド名</th>
+<th>行動</th>
+<th>X座標</th>
+<th>Y座標</th>
+<th>Z座標</th>
+<th>アイテムID</th>
+</tr>
+[% FOR member in members %]
+<tr>
+<td>[% member.data_id %]</td>
+<td>[% member.timestamp %]</td>
+<td>[% member.player %]</td>
+<td>[% member.world %]</td>
+<td>[% IF member.action %]設置[% ELSE %]除去[% END %]</td>
+<td>[% member.x %]</td>
+<td>[% member.y %]</td>
+<td>[% member.z %]</td>
+<td>[% member.data %]</td>
+</tr>
+[% END %]
+</table>

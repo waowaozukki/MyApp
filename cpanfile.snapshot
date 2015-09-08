@@ -72,6 +72,24 @@ DISTRIBUTIONS
       URI::QueryParam 0
       parent 0.223
       perl 5.008001
+  Amon2-DBI-0.32
+    pathname: T/TO/TOKUHIROM/Amon2-DBI-0.32.tar.gz
+    provides:
+      Amon2::DBI 0.32
+      Amon2::DBI::db 0.32
+      Amon2::DBI::dr 0.32
+      Amon2::DBI::st 0.32
+      Amon2::Plugin::DBI undef
+    requirements:
+      Carp::Clan 0
+      DBI 1.616
+      DBIx::TransactionManager 1.09
+      ExtUtils::MakeMaker 6.59
+      SQL::Interp 1.10
+      Test::More 0.98
+      Test::Requires 0
+      parent 0
+      perl 5.008001
   Apache-LogFormat-Compiler-0.32
     pathname: K/KA/KAZEBURO/Apache-LogFormat-Compiler-0.32.tar.gz
     provides:
@@ -202,6 +220,13 @@ DISTRIBUTIONS
       Scalar::Util 0
       Test::Exception 0
       Test::More 0.18
+  Carp-Clan-6.04
+    pathname: S/ST/STBEY/Carp-Clan-6.04.tar.gz
+    provides:
+      Carp::Clan 6.04
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::Exception 0
   Class-Accessor-0.34
     pathname: K/KA/KASEI/Class-Accessor-0.34.tar.gz
     provides:
@@ -2487,6 +2512,20 @@ DISTRIBUTIONS
       Class::Accessor::Lite 0.05
       Module::Build 0.38
       perl 5.008005
+  SQL-Interp-1.22
+    pathname: M/MA/MARKSTOS/SQL-Interp-1.22.tar.gz
+    provides:
+      DBIx::Interp 1.22
+      DBIx::Interp::STX undef
+      DBIx::Interp::db undef
+      SQL::Interp 1.22
+      SQL::Interp::SQL undef
+      SQL::Interp::Variable undef
+    requirements:
+      DBI 1
+      Module::Build 0.38
+      Sub::Exporter 0
+      perl v5.8.0
   SQL-Maker-1.21
     pathname: T/TO/TOKUHIROM/SQL-Maker-1.21.tar.gz
     provides:
@@ -2599,6 +2638,19 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       Test::More 0
+  Sub-Exporter-0.987
+    pathname: R/RJ/RJBS/Sub-Exporter-0.987.tar.gz
+    provides:
+      Sub::Exporter 0.987
+      Sub::Exporter::Util 0.987
+    requirements:
+      Carp 0
+      Data::OptList 0.100
+      ExtUtils::MakeMaker 6.30
+      Params::Util 0.14
+      Sub::Install 0.92
+      strict 0
+      warnings 0
   Sub-Identify-0.11
     pathname: R/RG/RGARCIA/Sub-Identify-0.11.tar.gz
     provides:
@@ -2661,6 +2713,64 @@ DISTRIBUTIONS
       SQL::Maker 0.14
       parent 0
       perl 5.008_001
+  Test-Deep-0.117
+    pathname: R/RJ/RJBS/Test-Deep-0.117.tar.gz
+    provides:
+      Test::Deep 0.117
+      Test::Deep::All undef
+      Test::Deep::Any undef
+      Test::Deep::Array undef
+      Test::Deep::ArrayEach undef
+      Test::Deep::ArrayElementsOnly undef
+      Test::Deep::ArrayLength undef
+      Test::Deep::ArrayLengthOnly undef
+      Test::Deep::Blessed undef
+      Test::Deep::Boolean undef
+      Test::Deep::Cache undef
+      Test::Deep::Cache::Simple undef
+      Test::Deep::Class undef
+      Test::Deep::Cmp undef
+      Test::Deep::Code undef
+      Test::Deep::Hash undef
+      Test::Deep::HashEach undef
+      Test::Deep::HashElements undef
+      Test::Deep::HashKeys undef
+      Test::Deep::HashKeysOnly undef
+      Test::Deep::Ignore undef
+      Test::Deep::Isa undef
+      Test::Deep::ListMethods undef
+      Test::Deep::MM undef
+      Test::Deep::Methods undef
+      Test::Deep::NoTest undef
+      Test::Deep::Number undef
+      Test::Deep::Obj undef
+      Test::Deep::Ref undef
+      Test::Deep::RefType undef
+      Test::Deep::Regexp undef
+      Test::Deep::RegexpMatches undef
+      Test::Deep::RegexpOnly undef
+      Test::Deep::RegexpRef undef
+      Test::Deep::RegexpRefOnly undef
+      Test::Deep::RegexpVersion undef
+      Test::Deep::ScalarRef undef
+      Test::Deep::ScalarRefOnly undef
+      Test::Deep::Set undef
+      Test::Deep::Shallow undef
+      Test::Deep::Stack undef
+      Test::Deep::String undef
+      Test::Deep::SubHash undef
+      Test::Deep::SubHashElements undef
+      Test::Deep::SubHashKeys undef
+      Test::Deep::SubHashKeysOnly undef
+      Test::Deep::SuperHash undef
+      Test::Deep::SuperHashElements undef
+      Test::Deep::SuperHashKeys undef
+      Test::Deep::SuperHashKeysOnly undef
+    requirements:
+      ExtUtils::MakeMaker 0
+      List::Util 1.09
+      Scalar::Util 1.09
+      Test::Builder 0
   Test-Exception-0.40
     pathname: E/EX/EXODIST/Test-Exception-0.40.tar.gz
     provides:

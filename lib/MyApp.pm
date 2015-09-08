@@ -1,18 +1,52 @@
+
+=pod
+package MyApp;
+use strict;
+use warnings;
+use parent qw/Amon2/;
+our $VERSION='0.01';
+use 5.008001;
+
+#__PACKAGE__->load_plugins(qw/
+#    +MyApp::Plugin::DB
+#/);
+=cut
+
 package MyApp;
 use strict;
 use warnings;
 use utf8;
 our $VERSION='0.01';
 use 5.008001;
-use MyApp::DB::Schema;
-use MyApp::DB;
+
+use DBI;
+use Teng::Schema::Loader;
 
 use parent qw/Amon2/;
 # Enable project local mode.
 __PACKAGE__->make_local_context();
 
-my $schema = MyApp::DB::Schema->instance;
+sub db {
+        my $self = shift;
+        if ( !defined $self->{db} ) {
+                my $conf = $self->config->{'DBI'}
+                        or die "missing configuration for 'DBI'";
+                my $dbh = DBI->connect(@{$conf});
+#               $schema ||= Teng::Schema::Loader->load(
+                $self->{db} = Teng::Schema::Loader->load(
+                        namespace => 'MyApp::DB',
+                        dbh       => $dbh,
+                );
+#               $self->{db} = MyApp::DB->new(
+#                       dbh    => $dbh,
+#                       schema => $schema,
+#               );
+        }
+        return $self->{db};
+}
 
+=pod
+my $schema = MyApp::DB::Schema->instance;
 sub db {
     my $c = shift;
     if (!exists $c->{db}) {
@@ -29,6 +63,7 @@ sub db {
     }
     $c->{db};
 }
+=cut
 
 1;
 __END__
