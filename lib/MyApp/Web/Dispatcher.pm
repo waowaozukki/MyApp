@@ -7,6 +7,12 @@ use Mine::Web::Dispatcher::Lite;
 my $router = router {
     # root
     submapper('/', { controller => 'Root' })
+        ->connect('bootcamp/', { action => 'bootcamp' })
+        ->connect('info/', { action => 'info' })
+        ->connect('plugins/', { action => 'plugins' })
+        ->connect('staff/', { action => 'staff' })
+        ->connect('news/', { action => 'news' })
+        ->connect('news/{tmpl_path:[a-zA-Z0-9/_-]+}', { action => 'news_page' })
         ->connect('member/', { action => 'member' })
         ->connect('ranking/', { action => 'ranking' })
         ->connect('say/{tmpl_path:[a-zA-Z0-9/_-]+}/{hitokoto:[a-zA-Z0-9/_-]+}/', { action => 'say' })

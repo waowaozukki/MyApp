@@ -8,6 +8,39 @@ use URI::Escape;
 use Time::Piece;
 use Data::Dumper;
 
+sub index {
+    my ($class, $c, $args) = @_;
+
+    return $c->render('web/index.tt', +{});
+}
+
+sub bootcamp {
+    my ($class, $c, $args) = @_;
+
+    return $c->render('web/bootcamp.tt', +{});
+}
+
+sub info {
+    my ($class, $c, $args) = @_;
+
+    return $c->render('web/info.tt', +{});
+}
+sub plugins {
+    my ($class, $c, $args) = @_;
+
+    return $c->render('web/plugins.tt', +{});
+}
+sub news {
+    my ($class, $c, $args) = @_;
+
+    return $c->render('web/news.tt', +{});
+}
+sub news_page {
+    my ($class, $c, $args) = @_;
+
+    return $c->render('web/news_page.tt', +{});
+}
+
 sub ranking {
     my ($class, $c, $args) = @_;
 

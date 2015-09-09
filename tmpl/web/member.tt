@@ -37,11 +37,11 @@
 <form>
 <p>
 <span>行動開始日時 :</span>
-<input type="text" name="start_date_time" step="7200" value="[% start_date_time %]" placeholder="2015-06-18 00:00:00" required>
+<input type="text" name="start_date_time" step="7200" value="[% start_date_time %]" placeholder="2015-09-01 00:00:00" required>
 </p>
 <p>
 <span>行動終了日時 :</span>
-<input type="text" name="end_date_time" step="7200" value="[% end_date_time %]" placeholder="2015-06-18 00:00:00" required>
+<input type="text" name="end_date_time" step="7200" value="[% end_date_time %]" placeholder="2015-09-01 23:59:59" required>
 </p>
 <p>
 <span>プレイヤーID :</span>

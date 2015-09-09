@@ -1,0 +1,502 @@
+/* ======================================== 繧ｵ繧､繝亥?菴薙↓驕ｩ逕ｨ*/
+* { /* 蜈ｨ縺ｦ縺ｮ隕∫ｴ?縺ｮ髢馴囈繝ｻ菴咏區繧抵ｼ舌∈ */
+margin:0;
+padding:0;
+}
+
+
+body {
+        margin: 0;
+        font-size: 96%;
+        color: #333;
+        text-align: center;
+        background-color: #ECECE6;
+}
+
+p, /* 譁?ｫ?縺ｮ陦碁俣繧呈欠螳? */
+#main ul,
+#main ol,
+#menuL ul,
+#menuL ol,
+dl
+{
+        line-height: 160%;
+}
+
+
+/* ========================================  #page 繝壹?繧ｸ螟匁棧 */
+#page {
+        width: 800px;
+        padding: 0px 20px;
+        margin: 0px auto;
+        text-align: left;
+        background-color: #FFFFFF;
+}
+
+/* ========================================  #header 逕ｻ髱｢荳企Κ */
+#header {
+        padding: 10px 0 0;
+        margin: 0;
+}
+
+
+#headerinfo { /* 繝倥ャ繝繝ｼ蜿ｳ荳翫?譁?ｭ励せ繝壹?繧ｹ */
+        text-align: right;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+}
+
+
+#header #header_title {/* 繝倥ャ繝繝ｼ蟾ｦ荳翫?繧ｿ繧､繝医Ν繧ｹ繝壹?繧ｹ */
+        float: left;
+        font-size: 24px;
+        color: #666666;
+        font-weight: bold;
+        margin: 0px 0px 5px;
+        padding: 0px;
+        height: 35px;
+}
+
+
+#header #headerimg {
+        clear: both;
+        height: 140px;
+        margin: 2px 0 0;
+        border-top: 2px solid #666666;
+        border-right: 1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+        background-image: url(../../images/minecraft/index/headback001.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+}
+
+
+#header #headerimg #msg { /* 繝倥ャ繝繝ｼ蜀?Γ繝?そ繝ｼ繧ｸ */
+        color:#FFFFFF;
+        margin:60px auto auto;
+        text-align:center;
+        font-size: 24px;
+        font-weight: bold;
+}
+
+
+#header img {
+        border: none;
+}
+
+
+/* ========================================  #menu 荳企Κ繝｡繝九Η繝ｼ */
+#menu {
+        border-right: 1px solid #CCCCCC;
+        border-left: 1px solid #CCCCCC;
+}
+
+
+ul.menu_f01{ /* 荳企Κ繝｡繝九Η繝ｼ */
+        background-color: #F0F0F0;
+        height: 40px;
+        border-bottom: 5px solid #999999;
+        margin: 0px;
+        border-top: 1px solid #999999;
+}
+
+ul.menu_f01 li{
+        float: left;
+        border-right: 1px solid #999999;
+        display: block;
+}
+
+ul.menu_f01 li a{
+        height: 25px;
+        width: 130px;
+        padding: 15px 0px 0px;
+        border-bottom: 5px solid #999999;
+        font-size: 14px;
+        font-weight: bold;
+        color: #666666;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        background-color: #F0F0F0;
+}
+
+ul.menu_f01 li a.nowthis{
+        border-bottom: 5px solid #FF6666!important;
+}
+
+ul.menu_f01 li a:hover , ul.menu_f01 li a.nowthis{
+        padding: 15px 0px 0px;
+        border-bottom: 5px solid #FF6666;
+        background-color: #E8E8E8;
+}
+
+
+/* ======================================== #contents 逕ｻ髱｢荳ｭ螟ｮ驛ｨ #main縺ｨ繧ｵ繧､繝峨Γ繝九Η繝ｼ縺ｮ螟匁棧 */
+#contents{
+        padding: 15px 0px 0px;
+        margin: 0px;
+        background-color: #FFFFFF;
+        background-image: url(../../images/minecraft/index/backS001.png);
+        background-position: top;
+        background-repeat: repeat-x;
+}
+
+
+/* ========================================  #main 繝壹?繧ｸ縺ｮ譛ｬ譁? */
+#main {
+        float: right;
+        width: 560px;
+        padding: 0;
+        margin: 10px 0 0 0px;
+        background-color: #FFF;
+}
+
+
+.contentswrap { /* #main荳ｭ縺ｮ髢馴囈隱ｿ謨ｴ */
+        margin:0 10px 15px;
+        padding:0;
+}
+
+
+#breadNavi {
+        margin:5px 0 20px;
+        padding:15px 0 0 2px;
+        height: 50px;
+}
+
+#main h1 { /* 譛ｬ譁??隕句?縺? */
+        background-image:url(../../images/minecraft/index/h1bar001.jpg);
+        background-repeat:no-repeat;
+        clear:left;
+        color:#FFF;
+        font-size:18px;
+        height:50px;
+        margin:0;
+        padding:16px 0 0 20px;
+}
+
+
+#main h2 { /* 譛ｬ譁??隕句?縺?2 */
+        background-image:url(../../images/minecraft/index/h2back.gif);
+        background-position:left top;
+        background-repeat:no-repeat;
+        border-bottom:1px solid #999999;
+        border-top:1px solid #999999;
+        clear:left;
+        color:#333;
+        font-size:16px;
+        margin:10px 0 1.5em;
+        padding:12px 0 0px 30px;
+        height: 27px;
+}
+
+
+#main h3 { /* 譛ｬ譁??隕句?縺?3 */
+        margin:0.5em 0;
+        background-color: #F6F6F6;
+        border-left: 5px solid #FF6666;
+        padding: 3px 0px 3px 5px;
+        font-size: 96%;
+        border-bottom: 1px solid #CCCCCC;
+}
+
+
+#main p { /* 譛ｬ譁??谿ｵ關ｽ */
+        margin:0 2px 1.5em 5px;
+}
+
+
+#main ul , #main ol{ /* 繝ｪ繧ｹ繝郁｡ｨ遉ｺ */
+        margin:1em 20px 2em 40px;
+        padding-left:25px;
+}
+
+
+#main dl { /* 螳夂ｾｩ繝ｪ繧ｹ繝郁｡ｨ遉ｺ */
+        margin:1em 0 1em 30px;
+        padding:0 0 10px;
+}
+
+
+#main dt {
+        float: left;
+        clear: left;
+        margin: 0 20px 0px 0;
+        font-weight: 700;
+}
+
+
+#main dd {
+        padding: 0 0 0 10px;
+        margin: 0;
+}
+
+
+#main dd.link {
+        margin: 0 0 0 100px;
+        border-left: 1px solid #CCCCCC;
+}
+
+
+#main #subnavi {
+        clear: both;
+        padding: 10px 0;
+        margin: 20px 0 10px;
+        border-top: 1px dashed #999;
+        text-align: right;
+}
+
+
+#main .img { /* 蝗ｳ繝ｻ蜀咏悄逕ｨ繧ｯ繝ｩ繧ｹ?壼?逵溘?繧医≧縺ｪ譫?繧偵▽縺代ｋ */
+        background-color:#CCC;
+        border:1px solid #999;
+        margin:0 0 20px 20px;
+        padding:5px;
+}
+
+.toInfo {
+        clear: left;
+        margin: 0px !important;
+        text-align: right;
+        list-style-type: none;
+}
+
+.toInfo a {
+        background-repeat: no-repeat;
+        background-image: url(../../images/minecraft/index/iconYa04.png);
+        padding: 0px 0px 0px 20px;
+}
+
+
+/* ========================================  menuL 蟾ｦ繧ｵ繧､繝峨Γ繝九Η繝ｼ */
+#menuL {
+        float: left;
+        clear: left;
+        width: 220px;
+        padding: 0;
+        margin: 10px 0;
+        color: #FFF;
+}
+
+
+.menuInfo { /* 繧ｵ繧､繝峨?繝?け繧ｹ蜀??繝｡繝?そ繝ｼ繧ｸ繝懊ャ繧ｯ繧ｹ */
+        background-image:url(../../images/minecraft/index/cor230.gif);
+        background-repeat:no-repeat;
+        color:#333;
+        margin:10px 0 0;
+        padding:1px 0;
+}
+
+
+.menuInfo p {
+        padding: 0 0 0 10px;
+        margin: 1em 10px 1em 5px;
+}
+
+.subinfo {縲/* 繧ｵ繧､繝峨?繝?け縺ｮ繝｡繝九Η繝ｼ */
+        margin:0 0 10px;
+        background-image: url(../../images/minecraft/indexsubmenuback001.png);
+        margin: 0px 0px 5px;
+}
+
+
+.subinfo .label { /* 繧ｵ繧､繝峨?繝?け縺ｮ繝｡繝九Η繝ｼ:繝ｩ繝吶Ν */
+        padding:3px 0px 0px 10px;
+        color: #FFFFFF;
+        font-weight: bold;
+        background-image: url(im../../images/minecraft/indexidemnu_labcak003.png);
+        background-repeat: no-repeat;
+        background-position: left top;
+        margin: 0px;
+        height: 28px;
+}
+
+.subinfo ul{ /* 繧ｵ繧､繝峨?繝?け縺ｮ繝｡繝九Η繝ｼ:繝ｪ繧ｹ繝? */
+        margin: 0px;
+}
+
+.subinfo li {
+        padding: 0px;
+        margin: 1px 0px 0px;
+        font-size: 86%;
+        color: #666666;
+        list-style-type: none;
+}
+
+.subinfo li a{
+        padding: 5px 10px;
+        border-bottom: 1px solid #CCCCCC;
+        border-left: 7px solid #CCCCCC;
+        text-decoration: none;
+        display: block;
+}
+
+.subinfo li a:hover{
+        border-left: 7px solid #FF6666;
+        color: #6699CC;
+        background-color: #F3F3F3;
+}
+
+
+.banner { /* 繧ｵ繝悶Γ繝九Η繝ｼ蜀??繝舌リ繝ｼ逕ｻ蜒上せ繝壹?繧ｹ */
+        margin: 0px 0px 5px;
+        width: 220px;
+}
+/* ========================================  #underNavi 逕ｻ髱｢荳矩Κ繧ｵ繝悶リ繝薙ご繝ｼ繧ｷ繝ｧ繝ｳ */
+#underNavi{
+        clear: both;
+        padding: 10px;
+        border-top: 1px solid #CCCCCC;
+}
+
+/* ========================================  #footer 逕ｻ髱｢荳矩Κ */
+#footer {
+        clear: both;
+        margin: 0px;
+        border-top: 5px solid #999999;
+        border-bottom: 1px solid #666;
+        text-align: center;
+        background-color: #FFF;
+        background-image: url(../../images/minecraft/index/backS001.png);
+}
+
+
+#footer p {
+        padding-top: 10px;
+        padding-bottom: 10px;
+}
+
+
+/* ========================================  #templatelink 逕ｻ髱｢荳矩Κ:闡嶺ｽ懊Μ繝ｳ繧ｯ */
+#templatelink {
+        padding: 5px 0px;
+        margin: 0px;
+        font-size: 12px;
+        text-align: right;
+}
+
+
+#templatelink a{
+        color: #666666;
+        text-decoration: none;
+}
+
+
+/* ========================================  縺昴?縺ｻ縺句句挨險ｭ螳? */
+#newsbox {
+        border: 1px solid #999999;
+        height: 150px;
+        overflow: auto;
+        margin: 0px 0px 10px;
+        background-image: url(../../images/minecraft/index/backS001.png);
+        background-repeat: repeat-x;
+        background-position: left top;
+}
+
+.table, /* 陦ｨ縺ｮ謨ｴ蠖｢繝ｻ驟崎牡 */
+.table2 {
+        width: 530px;
+}
+
+table {
+        margin: 0 0 2em 2px;
+}
+
+
+.table td {
+        padding: 10px;
+        border: 1px solid #CCC;
+        background-color: #FFF;
+}
+
+
+.table td.tb {
+        width: 200px;
+        background-color: #F8F5EF;
+}
+
+
+.table td.t1 {
+        width: 200px;
+        background-color: #F8F5EF;
+        margin: 0 auto;
+}
+
+
+.table td.t2 {
+        width: 200px;
+        background-color: #EAD4E5;
+        margin: 0 auto;
+}
+
+
+.table2 td {
+        padding: 10px;
+}
+
+
+.table2 td.tb {
+        width: 100px;
+        text-align: right;
+        background-color: #EBEBEB;
+}
+
+
+.itemList { /* .itemList #main蜀??谿ｵ邨?畑螟匁棧 */
+        clear:left;
+        margin:0 0 1em;
+}
+
+
+.box { /* .itemList #main蜀??谿ｵ邨?畑蜀?棧 */
+
+        margin:0 0px 5px 0;
+        width:260px;
+}
+
+
+.boxA {
+        width:240px;
+        height:100px;
+        float:left;
+}
+
+
+.boxB {
+        width:240px;
+        height:100px;
+        float:right;
+}
+
+
+.box h2 {
+        margin: 0 0 10px;
+}
+
+
+.box ul {
+        float: left;
+        width: 140px;
+        margin: 0 0 30px !important;
+        list-style-position: outside;
+}
+
+.eyeCaImg { /* .itemList #main蜀??谿ｵ邨?畑?壹い繧､繧ｭ繝｣繝?メ逕ｻ蜒? */
+        float:left;
+        margin:0 0 10px 2px;
+}
+
+
+strong {
+        font-weight: bold;
+        color: #CC6666;
+}
+
+hr { /* 豌ｴ蟷ｳ邱? flot繧ｯ繝ｪ繧｢逕ｨ */
+        clear:both;
+        color: #CCCCCC;
+        border: 1px solid #CCCCCC;
+        margin: 0px;
+        padding: 0px;
+}

@@ -1,3 +1,57 @@
-| <a href="/member/">アクティビティ履歴検索</a> | <a href="/ranking/">アクティビティランキング</a> | <a target="blank" href=":8123"></a>
-<br>
-<br>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<title>さすらいサーバー</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link href="/static/assets/css/minecraft/main.css" rel="stylesheet" type="text/css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47958315-1', 'webcrow.jp');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+<div id="page">
+    <div id="header">
+        <div id="header_title">
+            <a href="./">
+                <img src="/static/assets/images/minecraft/index/head_banner.jpg" width="300" height="40" alt="Sasurai Server">
+            </a>
+        </div>
+        <div id="headinfo">&nbsp</div>
+        <div id="headerimg">
+            <font size="7">
+                <I>
+                    <font color="#E6E6FA">
+                        <center><br>Welcome 2 Sasurai-Server</center>
+                    </font>
+                </I>
+            </font>
+        </div>
+        </div>
+        <div id="menu">
+            <ul class="menu_f01">
+                <li><a href="/" class="nowthis">Home</a></li>
+                <li><a href="/bootcamp/">初めての方へ</a></li>
+%%##                <li><a href="/info/">サーバー情報</a></li>
+%%##                <li><a href="/plugins/">プラグイン</a></li>
+%%##                <li><a href="/staff/">スタッフ</a></li>
+                <li><a href="/member/">履歴検索</a></li>
+                <li><a href="/ranking/">ランキング</a></li>
+                <li><a target="blank" href="http://sasurai-server.org:8123/">サーバマップ</a></li>
+            </ul>
+        </div>
+        <div id="contents">
+            <div id="menuL">
+                <a class="twitter-timeline" href="https://twitter.com/sasurai_server" data-widget-id="349444059695296512">@sasurai_server からのツイート</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            <div id="main">
+
