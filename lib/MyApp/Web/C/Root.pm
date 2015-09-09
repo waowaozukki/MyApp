@@ -32,6 +32,18 @@ SQL
     });
 }
 
+sub _is_point {
+    my ($class, $point) = @_;
+
+    return 0 if !defined $point;
+
+    if ($point =~ /^[-]?[0-9]+?$/) {
+        return 1;
+    }
+
+    return 0;
+}
+
 sub member {
     my ($class, $c, $args) = @_;
 
@@ -65,19 +77,19 @@ sub member {
     }
 
     my $point_x_sql = '';
-    if (defined($input->{point_x})) {
+    if ($class->_is_point($input->{point_x})) {
         $opt->{point_x} = $input->{point_x};
         $point_x_sql = ' AND h.x = :point_x ';
     }
 
     my $point_y_sql = '';
-    if (defined($input->{point_y})) {
+    if ($class->_is_point($input->{point_y})) {
         $opt->{point_y} = $input->{point_y};
         $point_y_sql = ' AND h.y = :point_y ';
     }
 
     my $point_z_sql = '';
-    if (defined($input->{point_z})) {
+    if ($class->_is_point($input->{point_z})) {
         $opt->{point_z} = $input->{point_z};
         $point_z_sql = ' AND h.z = :point_z ';
     }
@@ -140,17 +152,17 @@ SQL
         my $prev_page = $input->{page} - 1;
         $prev_page_params = '?page='.$prev_page.'&start_date_time='.$start_date.'&end_date_time='.$end_date;
         $prev_page_params .= ($input->{player_id}) ? '&player_id='.$input->{player_id} : '';
-        $prev_page_params .= (defined($input->{point_x})) ? '&point_x='.$input->{point_x} : '';
-        $prev_page_params .= (defined($input->{point_y})) ? '&point_y='.$input->{point_y} : '';
-        $prev_page_params .= (defined($input->{point_z})) ? '&point_z='.$input->{point_z} : '';
+        $prev_page_params .= ($class->_is_point($input->{point_x})) ? '&point_x='.$input->{point_x} : '';
+        $prev_page_params .= ($class->_is_point($input->{point_y})) ? '&point_y='.$input->{point_y} : '';
+        $prev_page_params .= ($class->_is_point($input->{point_z})) ? '&point_z='.$input->{point_z} : '';
     }
 
     my $next_page = $input->{page} + 1;
     my $next_page_params = '?page='.$next_page.'&start_date_time='.$start_date.'&end_date_time='.$end_date;
     $next_page_params .= ($input->{player_id}) ? '&player_id='.$input->{player_id} : '';
-    $next_page_params .= (defined($input->{point_x})) ? '&point_x='.$input->{point_x} : '';
-    $next_page_params .= (defined($input->{point_y})) ? '&point_y='.$input->{point_y} : '';
-    $next_page_params .= (defined($input->{point_z})) ? '&point_z='.$input->{point_z} : '';
+    $next_page_params .= ($class->_is_point($input->{point_x})) ? '&point_x='.$input->{point_x} : '';
+    $next_page_params .= ($class->_is_point($input->{point_y})) ? '&point_y='.$input->{point_y} : '';
+    $next_page_params .= ($class->_is_point($input->{point_z})) ? '&point_z='.$input->{point_z} : '';
 
     return $c->render('web/member.tt', +{
         prev_page_params => $prev_page_params,
@@ -158,9 +170,9 @@ SQL
         data_name_map => \%data_name_map,
         members => \@members,
         (($input->{player_id}) ? (player_id => $input->{player_id}) : ()),
-        ((defined($input->{point_x})) ? (point_x => $input->{point_x}) : ()),
-        ((defined($input->{point_y})) ? (point_y => $input->{point_y}) : ()),
-        ((defined($input->{point_z})) ? (point_z => $input->{point_z}) : ()),
+        (($class->_is_point($input->{point_x})) ? (point_x => $input->{point_x}) : ()),
+        (($class->_is_point($input->{point_y})) ? (point_y => $input->{point_y}) : ()),
+        (($class->_is_point($input->{point_z})) ? (point_z => $input->{point_z}) : ()),
         (($input->{start_date_time}) ? (start_date_time => $input->{start_date_time}) : ()),
         (($input->{end_date_time}) ? (end_date_time => $input->{end_date_time}) : ()),
     });
