@@ -54,12 +54,44 @@ sub member {
             100
 SQL
 
-    my @memers = $c->db->search_named($sql, {});
+    my @members = $c->db->search_named($sql, {});
+
+    my @blocks = $c->db->search('block_id_name', {});
+
+    my %block_id_map = map { $_->id => $_ } @blocks;
+    my %data_name_map;
+
+    for my $member (@members) {
+        my $data = $member->data;
+        next if exists($data_name_map{$data});
+        if ($member->action) {
+            my ($from,$to) = split('-', $data);
+            $data_name_map{$data} .= $class->_get_block_name($from,\%block_id_map);
+            $data_name_map{$data} .= ' -> ';
+            $data_name_map{$data} .= $class->_get_block_name($to,\%block_id_map);
+        } else {
+            $data_name_map{$data} = $class->_get_block_name($data,\%block_id_map);
+        }
+    }
 
     return $c->render('web/member.tt', +{
-        a => 1,
-        members => \@memers,
+        data_name_map => \%data_name_map,
+        members => \@members,
     });
+}
+
+sub _get_block_name {
+    my ($class, $data, $all_block_id_map) = @_;
+
+    my $block = $all_block_id_map->{$data};
+    if (!$block && $data =~ m|\d+:\d+|) {
+        my ($base,$add) = split(':', $data);
+        $block = $all_block_id_map->{$base};
+    }
+
+    my $block_name = ($block) ? $block->name : 'NO NAME';
+
+    return $block_name;
 }
 
 sub say {

@@ -14,7 +14,7 @@
 <th>X座標</th>
 <th>Y座標</th>
 <th>Z座標</th>
-<th>アイテムID</th>
+<th>アイテム名</th>
 </tr>
 [% FOR member in members %]
 <tr>
@@ -26,7 +26,7 @@
 <td>[% member.x %]</td>
 <td>[% member.y %]</td>
 <td>[% member.z %]</td>
-<td>[% member.data %]</td>
+<td>[% data_name_map[member.data] %]</td>
 </tr>
 [% END %]
 </table>
