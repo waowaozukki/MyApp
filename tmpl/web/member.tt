@@ -1,9 +1,10 @@
 [% INCLUDE "include/header.tt" %]
 
-<h1>最新アクティビティ１００件</h1>
-アクティビティ数とは、ブロック等を設置除去するたびに<br>
-カウントされていきます<br>
-<br>
+<h1>アクティビティ履歴検索</h1>
+アクティビティは、ブロック等を設置除去するたびに記録されていきます<br>
+ページ下部より行動開始期間,行動終了期間,プレイヤーID,座標等を入力することで検索出来ます<br>
+
+<h2>[% IF prev_page_params %]<a href="/member/[% prev_page_params %]">前</a> | [% END %]<a href="/member/[% next_page_params %]">次</a></h2><br>
 <table border="1" cellpadding="5" cellspacing="0">
 <tr>
 <th>作業ID</th>
@@ -30,3 +31,56 @@
 </tr>
 [% END %]
 </table>
+
+<h2>[% IF prev_page_params %]<a href="/member/[% prev_page_params %]">前</a> | [% END %]<a href="/member/[% next_page_params %]">次</a></h2><br>
+
+<form>
+<p>
+<span>行動開始日時 :</span>
+<input type="text" name="start_date_time" step="7200" value="[% start_date_time %]" placeholder="2015-06-18 00:00:00" required>
+</p>
+<p>
+<span>行動終了日時 :</span>
+<input type="text" name="end_date_time" step="7200" value="[% end_date_time %]" placeholder="2015-06-18 00:00:00" required>
+</p>
+<p>
+<span>プレイヤーID :</span>
+<input type="text" name="player_id" step="7200" value="[% player_id %]" placeholder="空白可能">
+</p>
+<p>
+<span>X座標 :</span>
+<input type="text" name="point_x" step="7200" value="[% point_x %]" placeholder="空白可能">
+<span>Y座標 :</span>
+<input type="text" name="point_y" step="7200" value="[% point_y %]" placeholder="空白可能">
+<span>Z座標 :</span>
+<input type="text" name="point_z" step="7200" value="[% point_z %]" placeholder="空白可能">
+</p>
+<p>
+<span><input type="submit" value="検索"></span>
+</p>
+</form>
+
+
+<script type="text/JavaScript">
+    function SetOrderId(mode) {
+    var myDate = new Date();
+    var Year = new String(myDate.getFullYear());
+    var Month = new String(myDate.getMonth()+1);
+    var Day = new String(myDate.getDate());
+    if ( Day.length == 1 ) Day = "0" + Day;
+
+    if (mode == 'start') {
+        document.forms[0].elements['start_date_time'].value = Year + "-" + Month + "-" + Day + " 00:00:00";
+    }
+
+    if (mode == 'end') {
+        document.forms[0].elements['end_date_time'].value = Year + "-" + Month + "-" + Day + " 23:59:59";
+    }
+}
+[% IF !start_date_time %]
+SetOrderId('start');
+[% END %]
+[% IF !end_date_time %]
+SetOrderId('end');
+[% END %]
+</script>
