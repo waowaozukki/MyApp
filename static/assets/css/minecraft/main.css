@@ -137,7 +137,6 @@ ul.menu_f01 li a:hover , ul.menu_f01 li a.nowthis{
         padding: 15px 0px 0px;
         margin: 0px;
         background-color: #FFFFFF;
-        background-image: url(../../images/minecraft/index/backS001.png);
         background-position: top;
         background-repeat: repeat-x;
 }
@@ -358,7 +357,6 @@ ul.menu_f01 li a:hover , ul.menu_f01 li a.nowthis{
         border-bottom: 1px solid #666;
         text-align: center;
         background-color: #FFF;
-        background-image: url(../../images/minecraft/index/backS001.png);
 }
 
 
@@ -389,7 +387,6 @@ ul.menu_f01 li a:hover , ul.menu_f01 li a.nowthis{
         height: 150px;
         overflow: auto;
         margin: 0px 0px 10px;
-        background-image: url(../../images/minecraft/index/backS001.png);
         background-repeat: repeat-x;
         background-position: left top;
 }
